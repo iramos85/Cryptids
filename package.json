@@ -1,0 +1,27 @@
+{
+  "name": "Project-2",
+  "version": "1.0.0",
+  "description": "Full Stack Application",
+  "main": "server.js",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.10.9"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.generalassemb.ly/iramos85/Project-2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
