@@ -1,2 +1,0 @@
-# Cryptids
-Cryptid Database
