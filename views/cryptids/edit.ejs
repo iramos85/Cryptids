@@ -2,13 +2,13 @@
 <%- include('../partials/nav.ejs') %>
 
 <h1>Edit Entry</h1>
-<form action="/fruits/<%=fruit.id%>?_method=PUT" method="POST">
+<form action="/cryptids/<%=cryptids.id%>?_method=PUT" method="POST">
     <!--  NOTE: the form is pre-populated with values for the server-->
     Name: <input type="text" value="<%=cryptids.name%>" /><br/>
+    Image: <img src="<%=cryptids.images%>" ><br/>
     Description: <textarea value="<%=cryptids.description%>" name="description"></textarea><br/>
-    Image: <input type="url" value="<%=cryptids.images%>" /><br/>
     Temperament:
-    <input type="checkbox" name="readyToEat"
+    <input type="checkbox" name="temperament"
         <% if(cryptids.temperament === true){ %>
             checked
         <% } %>

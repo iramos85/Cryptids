@@ -1,15 +1,20 @@
 <%- include('../partials/header.ejs') %> 
 <%- include('../partials/nav.ejs') %>
 
-<h1><%=cryptids.name; %></h1>
-Description:<%=cryptids.description; %>
-<% if(cryptid.temperament === true){ %>
-    <%=cryptids.name; %> is reported to be aggressive.
+<h1 style="font-family: 'Creepster', cursive; text-align: center; font-size: 50px;"><%=cryptid.name; %></h1>
+<img class="cryptid-image" src="<%=cryptid.img; %>">
+<h3 style="font-family: 'Special Elite', cursive;">Description:</h3>
+<p style="font-family: 'Special Elite', cursive;"><%=cryptid.description; %></p>
+<h3 style="font-family: 'Special Elite', cursive;">Temperament:</h3>
+<p style="font-family: 'Special Elite', cursive;">
+<% if(cryptid.temperament === false){ %>
+    <%=cryptid.name; %> is reported to be aggressive.
 <% } else { %>
-    <%=cryptids.name; %> has not been noticed to be aggressive.
+    <%=cryptid.name; %> has not been noticed to be aggressive.
 <% } %>
+</p>
 <nav>
-    <a href="/cryptids">Back to Index</a>
+    <a style="font-family: 'Special Elite', cursive; text-decoration: none;" href="/cryptids">Back to Index</a>
 </nav>
 
 <%- include('../partials/footer.ejs') %>

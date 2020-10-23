@@ -1,14 +1,22 @@
 <%- include('../partials/header.ejs') %> 
 <%- include('../partials/nav.ejs') %>
 
-<h1>Cryptids Index</h1>
+<h1 style="font-family: 'Creepster', cursive; text-align: center; font-size: 50px;">Cryptids Index</h1>
+<div class='search-container'>
+<form class="example" action="action_page.php">
+	<input style="font-family: 'Special Elite', cursive;" type="text" placeholder="Search.." name="search">
+	<input style="font-family: 'Special Elite', cursive;" type="submit" name="" value="Search"/>
+  </form>
+</div>
 <ul>
+	<p>
 	<% for(let i = 0; i < cryptids.length; i++){ %>
-		<li>
+		<li style="font-family: 'Special Elite', cursive;">
 			<a href="/cryptids/<%=cryptids[i].id; %>">
 				<%=cryptids[i].name; %>
 			</a>
 		</li>
+	</p>
 	<% } %>
 </ul>
 
