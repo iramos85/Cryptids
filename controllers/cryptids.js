@@ -38,19 +38,22 @@ router.get('/', (req, res)=>{
 router.get('/seed', (req, res)=>{
     Cryptid.create([
         {
-            name:'grapefruit',
-            color:'pink',
-            readyToEat:true
+            name:'Skunk Ape',
+            Description: 'large, foul-smelling, hairy, ape-like creature.  Runs upright on two legs, physically powerful',
+            img: "https://i.pinimg.com/originals/f3/b8/1f/f3b81f52de2ff448f047bd95b92f5ebc.jpg",
+            temperament:true
         },
         {
-            name:'grape',
-            color:'purple',
-            readyToEat:false
+          name:'Chupacabra',
+          Description: 'Reptile-like creature, leathery greenish-gray skin and sharp spines running down its back.  It is said to be approximately 3 to 4 feet (0.9 to 1.2 m) high, and stands and hops in a fashion similar to that of a kangaroo',
+          img: "https://i.pinimg.com/originals/0d/71/46/0d7146bad69776c328caabcef5a6b9ef.jpg",
+          temperament:true
         },
         {
-            name:'avocado',
-            color:'green',
-            readyToEat:true
+          name:'Mothman',
+          Description: 'large, dark and tall man with wings and large red glowing eyes',
+          img: "https://allthatsinteresting.com/wordpress/wp-content/uploads/2017/05/the-mothman.png",
+          temperament:false
         }
     ], (err, data)=>{
         res.redirect('/cryptids');

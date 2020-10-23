@@ -1,0 +1,15 @@
+<%- include('../partials/header.ejs') %> 
+<%- include('../partials/nav.ejs') %>
+
+<h1><%=cryptids.name; %></h1>
+Description:<%=cryptids.description; %>
+<% if(cryptid.temperament === true){ %>
+    <%=cryptids.name; %> is reported to be aggressive.
+<% } else { %>
+    <%=cryptids.name; %> has not been noticed to be aggressive.
+<% } %>
+<nav>
+    <a href="/cryptids">Back to Index</a>
+</nav>
+
+<%- include('../partials/footer.ejs') %>

@@ -1,0 +1,12 @@
+<%- include('../partials/header.ejs') %> 
+<%- include('../partials/nav.ejs') %>
+
+<h1>New Cryptid</h1>
+<form action="/cryptids" method="POST">
+    Name: <input type="text" name="name" /><br/>
+    Description: <textarea placeholder="Height/Shape/Characteristics" name="description"></textarea><br/>
+    Aggressive: <input type="checkbox" name="temperament" /><br/>
+    <input type="submit" name="" value="Log Cryptid"/>
+</form>
+
+<%- include('../partials/footer.ejs') %>
