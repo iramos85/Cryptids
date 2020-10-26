@@ -60,7 +60,7 @@ router.get('/seed', (req, res)=>{
     })
 });
 
-router.get('/:id', isAuthenticated, (req, res) => {
+router.get('/:id',isAuthenticated, (req, res) => {
 	Cryptid.findById(req.params.id, (err, foundCryptid) => {
 		res.render('cryptids/show.ejs', {
 		cryptid: foundCryptid,
@@ -92,7 +92,7 @@ router.put('/:id', isAuthenticated, (req, res) => {
 })
 
 
-router.delete('/:id', isAuthenticated, (req, res) => {
+router.delete('/:id/edit', isAuthenticated, (req, res) => {
   Cryptid.findByIdAndRemove(req.params.id, (err, data) => {
     res.redirect('/cryptids')
   })

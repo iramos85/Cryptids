@@ -1,9 +1,12 @@
 
 <nav>
+  <div class='nav-links'>
     <a style="font-family: 'Special Elite', cursive; text-decoration: none;" href="/cryptids">Cryptid Search</a> |
-    <a style="font-family: 'Special Elite', cursive; text-decoration: none;" href="/cryptids/new">Log A Sighting</a> 
+    <a style="font-family: 'Special Elite', cursive; text-decoration: none;" href="/cryptids/new">Log A Sighting</a>
+    <a style="font-family: 'Special Elite', cursive; text-decoration: none;" href="/cryptids/forum">Forum</a>
+    </div>
     <% if (currentUser) { %>
-    <p style="font-family: 'Special Elite', cursive;"> Welcome <%= currentUser.username %> </p>
+    <p style="font-family: 'Special Elite', cursive;"> Welcome <a href=<%= currentUser.username %>><%= currentUser.username %></a></p>
     <div style="display: inline-block;">
       <form action="/sessions?_method=DELETE" method="POST">
         <input type="submit" value="Log Out" style="font-family: 'Special Elite', cursive;"/>

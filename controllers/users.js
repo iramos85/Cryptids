@@ -7,6 +7,15 @@ users.get('/new', (req, res) => {
   res.render('users/new.ejs', { currentUser: req.session.currentUser })
 })
 
+users.get('/:id',isAuthenticated, (req, res) => {
+	User.findById(req.params.id, (err, foundUser) => {
+		res.render('users/show.ejs', {
+		user: foundUser,
+		currentUser: req.session.currentUser
+		})
+	})
+})
+
 users.post('/', (req, res) => {
   //overwrite the user password with the hashed password, then pass that into our database
   req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10))
@@ -15,6 +24,7 @@ users.post('/', (req, res) => {
     res.redirect('/cryptids')
   })
 })
+
 
 
 module.exports = users
