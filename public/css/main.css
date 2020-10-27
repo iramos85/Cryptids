@@ -127,3 +127,12 @@ nav {
 .edit-image{
     background-image: url('../images/edit.jpeg');
 }
+
+#new-image{
+    background-image: url('https://cdn.supadupa.me/shop/14281/images/1071941/il_fullxfull.446740133_mx3i_grande.jpg');
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    height: 50%
+}
