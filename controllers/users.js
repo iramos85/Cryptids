@@ -7,7 +7,7 @@ users.get('/new', (req, res) => {
   res.render('users/new.ejs', { currentUser: req.session.currentUser })
 })
 
-users.get('/:id',isAuthenticated, (req, res) => {
+users.get('/:id', (req, res) => {
 	User.findById(req.params.id, (err, foundUser) => {
 		res.render('users/show.ejs', {
 		user: foundUser,

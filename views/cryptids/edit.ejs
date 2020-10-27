@@ -2,19 +2,24 @@
 <%- include('../partials/nav.ejs') %>
 
 <h1>Edit Entry</h1>
-<form action="/cryptids/<%=cryptids.id%>?_method=PUT" method="POST">
-    <!--  NOTE: the form is pre-populated with values for the server-->
-    Name: <input type="text" value="<%=cryptids.name%>" /><br/>
-    Image: <img src="<%=cryptids.images%>" ><br/>
-    Description: <textarea value="<%=cryptids.description%>" name="description"></textarea><br/>
+<div class='edit-image'>
+<div class='description'>
+<form action="/cryptids/<%=cryptid.id%>?_method=PUT" method="POST">
+    Name: <input type="text" name = 'name' value="<%=cryptid.name%>" /><br/>
+    Image: <input type="url" name = 'img' value="<%=cryptid.img%>" /><br/>
+    Description: <input type="text" value="<%=cryptid.description%>" name="description"><br/>
     Temperament:
-    <input type="checkbox" name="temperament"
-        <% if(cryptids.temperament === true){ %>
+    <input type="checkbox" value="<%=cryptid.temperament%>" name="temperament"
+        <% if(cryptid.temperament === true){ %>
             checked
         <% } %>
     />
     <br/>
-    <input type="submit" name="" value="Submit Changes"/>
+    <a href="/cyptids/<%=cryptid.id%>"><input type="submit" name="" value="Submit Changes"/></a>
 </form>
-
+<form action="/cryptids/<%=cryptid.id%>?_method=DELETE" method="POST">
+    <input type="submit" name="" value="Delete"/>
+</form>
+</div>
+</div>
 <%- include('../partials/footer.ejs') %>

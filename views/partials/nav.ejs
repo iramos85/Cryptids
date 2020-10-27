@@ -1,12 +1,12 @@
 
 <nav>
   <div class='nav-links'>
-    <a style="font-family: 'Special Elite', cursive; text-decoration: none;" href="/cryptids">Cryptid Search</a> |
-    <a style="font-family: 'Special Elite', cursive; text-decoration: none;" href="/cryptids/new">Log A Sighting</a>
-    <a style="font-family: 'Special Elite', cursive; text-decoration: none;" href="/cryptids/forum">Forum</a>
+    <button class='nav-button'><a style='text-decoration: none' href="/cryptids">Cryptid Search</a></button>
+    <button class='nav-button' onclick="playAudio('../audio/scream.wav')"><a  style='text-decoration: none' href="/cryptids/new">Log A Sighting</a></button>
+    <button class='nav-button'><a  style='text-decoration: none' href="/forums">Forum</a> </button>
     </div>
     <% if (currentUser) { %>
-    <p style="font-family: 'Special Elite', cursive;"> Welcome <a href=<%= currentUser.username %>><%= currentUser.username %></a></p>
+    <p style="font-family: 'Special Elite', cursive;"> Welcome <a href="users/<%= currentUser.username %>"><%= currentUser.username %></a></p>
     <div style="display: inline-block;">
       <form action="/sessions?_method=DELETE" method="POST">
         <input type="submit" value="Log Out" style="font-family: 'Special Elite', cursive;"/>
@@ -17,3 +17,7 @@
     <% } %>
     </div>
 </nav>
+
+<script>
+  const buttonSnd = new Audio('audio/scream.wav')
+</script>

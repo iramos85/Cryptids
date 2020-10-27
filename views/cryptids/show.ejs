@@ -3,7 +3,8 @@
 
 <h1 style="font-family: 'Creepster', cursive; text-align: center; font-size: 50px;"><%=cryptid.name; %></h1>
 <img class="cryptid-image" src="<%=cryptid.img; %>">
-<h3 style="font-family: 'Special Elite', cursive;">Description:</h3>
+<div class='description'>
+<h3 style="font-family: 'Special Elite', cursive; background-color: grey; width: fit-content; text-align:justify; padding: 1px;">Description:</h3>
 <p style="font-family: 'Special Elite', cursive;"><%=cryptid.description; %></p>
 <h3 style="font-family: 'Special Elite', cursive;">Temperament:</h3>
 <p style="font-family: 'Special Elite', cursive;">
@@ -13,9 +14,8 @@
     <%=cryptid.name; %> has not been noticed to be aggressive.
 <% } %>
 </p>
-<a href=<%=cryptid.media; %>>Media</a>
-<nav>
-    <a style="font-family: 'Special Elite', cursive; text-decoration: none;" href="/cryptids">Back to Index</a>
-</nav>
+<button class='edit'><a style="text-decoration: none; color: whitesmoke" href="<%=cryptid.media; %>">Media</a></button>
+<button class='edit'><a style="text-decoration: none; color: whitesmoke" href="/cryptids/<%=cryptid.id; %>/edit">Edit</a></button>
+</div>
 
 <%- include('../partials/footer.ejs') %>

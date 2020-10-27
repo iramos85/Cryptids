@@ -6,6 +6,8 @@ require('dotenv').config()
 
 const app = express()
 
+
+
 //env variables
 const PORT = process.env.PORT
 const mongodbURI = process.env.MONGODBURI
@@ -43,6 +45,11 @@ app.use('/users', usersController)
 const sessionsController = require('./controllers/sessions.js')
 app.use('/sessions', sessionsController)
 
+const forumsController = require('./controllers/forums.js')
+// app.use('/forums', forumsController)
+// app.post('/thread', forumsController.post);
+// app.get('/thread/:title.:format?', forumsController.show);
+// app.get('/thread', forumsController.list);
 
 app.get('/', (req, res) => {
   res.render('home.ejs', { currentUser: req.session.currentUser })

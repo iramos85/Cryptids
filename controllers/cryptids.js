@@ -61,17 +61,16 @@ router.get('/seed', (req, res)=>{
 });
 
 router.get('/:id',isAuthenticated, (req, res) => {
-	Cryptid.findById(req.params.id, (err, foundCryptid) => {
-		res.render('cryptids/show.ejs', {
+Cryptid.findById(req.params.id, (err, foundCryptid) => {	
+  res.render('cryptids/show.ejs', {
 		cryptid: foundCryptid,
 		currentUser: req.session.currentUser
 		})
 	})
 })
 
-
 router.get('/:id/edit', (req, res) => {
-  Cryptid.findById(req.params.id, (err, foundCryptid) => {
+Cryptid.findById(req.params.id, (err, foundCryptid) => {
     res.render('cryptids/edit.ejs', {
       cryptid: foundCryptid,
 			currentUser: req.session.currentUser
@@ -87,12 +86,17 @@ router.put('/:id', isAuthenticated, (req, res) => {
 		req.body.temperament = false
 	}
   Cryptid.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedModel) => {
+    if(err){
+      console.log(err)
+    } else {
+      console.log('hit put route!')
     res.redirect('/cryptids')
+    }
   })
 })
 
 
-router.delete('/:id/edit', isAuthenticated, (req, res) => {
+router.delete('cryptids/:id', isAuthenticated, (req, res) => {
   Cryptid.findByIdAndRemove(req.params.id, (err, data) => {
     res.redirect('/cryptids')
   })
