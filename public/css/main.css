@@ -48,6 +48,13 @@ max-width: 30%;
 height: auto;
 }
 
+nav {
+    background-image: url("https://bloximages.newyork1.vip.townnews.com/wvgazettemail.com/content/tncms/assets/v3/editorial/a/3e/a3ec5e35-3b1b-5b04-ab87-3d498ee491c7/5d70358e771ea.image.jpg?resize=1200%2C582");
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 100%;
+}
+
 .nav-links{
     font-family: 'Special Elite',cursive;
     width: 100%;
@@ -59,7 +66,7 @@ height: auto;
     animation: wiggle 75ms infinite;
   animation-timing-function: linear;
   background-color: black;
-  color: whitesmoke;
+  color: red;
 }
 
 @keyframes wiggle {
@@ -70,6 +77,7 @@ height: auto;
 
 .nav-button {
     font-family: 'Special Elite',cursive;
+    background: black;
 }
 
 .description {
@@ -92,5 +100,5 @@ height: auto;
 }
 
 .edit-image{
-    background-image: url("https://bloximages.newyork1.vip.townnews.com/wvgazettemail.com/content/tncms/assets/v3/editorial/a/3e/a3ec5e35-3b1b-5b04-ab87-3d498ee491c7/5d70358e771ea.image.jpg");
+    background-image: url('../images/edit.jpeg');
 }

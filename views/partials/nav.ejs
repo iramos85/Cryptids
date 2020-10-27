@@ -1,9 +1,9 @@
 
 <nav>
   <div class='nav-links'>
-    <button class='nav-button'><a style='text-decoration: none' href="/cryptids">Cryptid Search</a></button>
-    <button class='nav-button' onclick="playAudio('../audio/scream.wav')"><a  style='text-decoration: none' href="/cryptids/new">Log A Sighting</a></button>
-    <button class='nav-button'><a  style='text-decoration: none' href="/forums">Forum</a> </button>
+    <button class='nav-button'><a style='text-decoration: none; color: whitesmoke;' href="/cryptids">Cryptid Search</a></button>
+    <button class='nav-button' onclick="playAudio('../audio/scream.wav')"><a  style='text-decoration: none; color: whitesmoke' href="/cryptids/new">Log A Sighting</a></button>
+    <button class='nav-button'><a  style='text-decoration: none; color: whitesmoke;' href="/forums">Forum</a> </button>
     </div>
     <% if (currentUser) { %>
     <p style="font-family: 'Special Elite', cursive;"> Welcome <a href="users/<%= currentUser.username %>"><%= currentUser.username %></a></p>

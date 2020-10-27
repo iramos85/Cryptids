@@ -96,9 +96,14 @@ router.put('/:id', isAuthenticated, (req, res) => {
 })
 
 
-router.delete('cryptids/:id', isAuthenticated, (req, res) => {
+router.delete('/:id', isAuthenticated, (req, res) => {
   Cryptid.findByIdAndRemove(req.params.id, (err, data) => {
+    if(err){
+      console.log(err)
+    } else {
+      console.log('something went through!')
     res.redirect('/cryptids')
+    }
   })
 })
 

@@ -2,7 +2,8 @@
 <%- include('../partials/nav.ejs') %>
 
 <h1>Edit Entry</h1>
-<div class='edit-image'>
+<div>
+    <img src="./images/edit.jpg" class='edit-image'>
 <div class='description'>
 <form action="/cryptids/<%=cryptid.id%>?_method=PUT" method="POST">
     Name: <input type="text" name = 'name' value="<%=cryptid.name%>" /><br/>
