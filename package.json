@@ -17,6 +17,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
+  "engines": {
+    "node": "14.10.1"
+  },
+  "description": "",
   "repository": {
     "type": "git",
     "url": "https://git.generalassemb.ly/iramos85/Project-2.git"
