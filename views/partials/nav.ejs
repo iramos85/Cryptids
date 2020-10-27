@@ -1,12 +1,13 @@
 
 <nav>
+  <div id="opaque">
   <div class='nav-links'>
     <button class='nav-button'><a style='text-decoration: none; color: whitesmoke;' href="/cryptids">Cryptid Search</a></button>
     <button class='nav-button' onclick="playAudio('../audio/scream.wav')"><a  style='text-decoration: none; color: whitesmoke' href="/cryptids/new">Log A Sighting</a></button>
     <button class='nav-button'><a  style='text-decoration: none; color: whitesmoke;' href="/forums">Forum</a> </button>
     </div>
     <% if (currentUser) { %>
-    <p style="font-family: 'Special Elite', cursive;"> Welcome <a href="users/<%= currentUser.username %>"><%= currentUser.username %></a></p>
+    <p style="font-family: 'Special Elite', cursive;"> Welcome <a style="text-decoration: none;" href="users/<%= currentUser.username %>"><%= currentUser.username %></a></p>
     <div style="display: inline-block;">
       <form action="/sessions?_method=DELETE" method="POST">
         <input type="submit" value="Log Out" style="font-family: 'Special Elite', cursive;"/>
@@ -16,6 +17,7 @@
       <button type="button" name="button"><a style="font-family: 'Special Elite', cursive; text-decoration: none;" href="/sessions/new">Log In</a></button>
     <% } %>
     </div>
+  </div>
 </nav>
 
 <script>

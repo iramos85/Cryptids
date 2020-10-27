@@ -35,7 +35,7 @@ router.get('/', (req, res)=>{
     })
 })
 
-router.get('/seed', (req, res)=>{
+router.get('cryptids/seed', (req, res)=>{
     Cryptid.create([
         {
             name:'Skunk Ape',
