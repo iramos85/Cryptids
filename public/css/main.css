@@ -42,6 +42,7 @@ h1 {
 .cryptid-image 
 {
 position: absolute;
+margin-top: 5%;
 top: 50%;
 left: 75%;
 height: 50%;
@@ -112,8 +113,9 @@ header {
     text-align: center;
     font-family: 'Special Elite', cursive;
     color: whitesmoke;
-    line-height: 250px;
-    height: 250px;
+    line-height: 50px;
+    position: relative;
+    top: 90px;
 }
 
 /*/////////////////////////////////////////////////////// nav-bar ///////////////////////////////////////////////*/
@@ -159,6 +161,12 @@ color: whitesmoke;
 #welcome{
     position: relative;
     margin-top: 15px;
+}
+
+#welcome-user {
+    width: 100%;
+    margin-right: 15%;
+    line-height: 25px;
 }
 
 #sign-in{
@@ -219,13 +227,25 @@ color: whitesmoke;
 
 .description {
    position: absolute;
-    top: 25%;
-    left: 3%;
-    width: 40%;
-    height: 50%;
+   margin-top: 7%; 
+   top: 25%;
+    left: 5%;
+    width: 30%;
+    height: 25%;
     background: rgba(0, 0, 0, 0.4);
     border: solid black;
     border-radius: 5%;
+    align-items: center;
+}
+
+
+
+
+/* ////////////////////////////////Sign-In Session//////////////////////////////////////////// */
+#edit-title-text {
+    font-family: 'Special Elite',cursive;
+    padding-top: 100px;
+    margin-bottom: 75px;
 }
 
 .edit {
@@ -237,7 +257,50 @@ color: whitesmoke;
 }
 
 .edit-image{
-    background-image: url('../images/edit.jpeg');
+    margin-right: 25%;
+    margin-left: 25%;
+    width: 50%;
+    height: 600px;
+}
+
+#edit-description {
+    position: absolute;
+    margin-top: 7%;
+    top: 25%;
+     left: 35%;
+     width: 30%;
+     height: 25%;
+     background: rgba(0, 0, 0, 0.4);
+     border: solid black;
+     border-radius: 5%;
+     align-items: center;
+     display: flex;
+     flex-direction: column;
+     color: whitesmoke
+ }
+
+ .edit-text {
+     margin-bottom: 10px;
+     margin-top: 10px;
+ }
+
+#cryptid-new-headline {
+    font-family: 'Special Elite',cursive;
+    padding-top: 150px;
+    margin-bottom: 75px;
+}
+
+#new-cryptid-text {
+    font-family: 'Special Elite',cursive;
+    margin-left: 15%;
+    margin-right: -15%;
+    margin-top: 5%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    color: black;
+    background: rgba(60, 60, 60, 0.75);
 }
 
 #new-image{
@@ -252,3 +315,9 @@ color: whitesmoke;
     position: absolute;
     height: 75%;
 }
+
+/* #new-mask {
+    background: rgba(60, 60, 60, 0.75);
+    z-index: 2;
+    width: 50%;
+} */

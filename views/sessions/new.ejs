@@ -2,10 +2,15 @@
 <%- include('../partials/nav.ejs') %>
 
 <h1 id='session-title-text'>User Sign In page</h1>
-<form action="/sessions" method="POST">
-    Username: <input type="text" name="username" /><br/>
+
+<img id='new-profile-image' src="https://i.pinimg.com/originals/31/cd/9f/31cd9ff32930e3dc4f9a5b5627d6de31.jpg">
+
+<div class='profile-fields'>
+<form id='account-text' action="/sessions" method="POST">
+    Username: <input class='username' type="text" name="username" /><br/>
     Password: <input type="password" name="password" /><br/>
-    <input type="submit" name="" value="User Sign In"/>
+    <input id='create-user' type="submit" name="" value="User Sign In"/>
 </form>
+</div>
 
 <%- include('../partials/footer.ejs') %>

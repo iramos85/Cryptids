@@ -1,26 +1,30 @@
 
 <nav>
   <div class='nav-links'>
-      <button class='nav-button'><a  id='nav-anchor' href="/cryptids">Cryptid Search</a></button>
-      <button class='nav-button' onclick="playAudio('../audio/scream.wav')"><a id='nav-anchor' href="/cryptids/new">Log A Sighting</a></button>
+    <!-- <div> -->
+      <button class='nav-button'>
+        <a  id='nav-anchor' href="/cryptids">Cryptid Search</a>
+      </button>
+    <!-- </div> -->
+      <button class='nav-button' onclick="playAudio(buttonSnd)"><a id='nav-anchor' href="/cryptids/new">Log A Sighting</a></button>
       <button class='nav-button'><a  id='nav-anchor' href="/forums">Forum</a> </button>
     
 
     <% if (currentUser) { %>
-    <p style="font-family: 'Special Elite', cursive;"> Welcome <a style="text-decoration: none;" href="users/<%= currentUser.username %>"><%= currentUser.username %></a></p>
+    <p id='welcome-user' style="font-family: 'Special Elite', cursive;"> Welcome <a style="text-decoration: none;" href="users/<%= currentUser.username %>"><%= currentUser.username %></a></p>
       
     <div id = 'sign-in'>
           <form action="/sessions?_method=DELETE" method="POST">
             <input type="submit" value="Log Out" style="font-family: 'Special Elite', cursive;"/>
           </form>
-          <% } else { %>
+    </div>      
+    <% } else { %>
           <button id = 'profile-log' type="button" name="button"><a class='links' href="/users/new">Sign Up</a></button>
           <button id = 'profile-log' type="button" name="button"><a class='links' href="/sessions/new">Log In</a></button>
-          <% } %>
-    </div>
+          <% } %>   
   </div>
 </nav>
 
 <script>
-  const buttonSnd = new Audio('audio/scream.wav')
+  const buttonSnd = new Audio('/assets/audio/scream.wav')
 </script>

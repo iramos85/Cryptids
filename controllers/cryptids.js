@@ -11,7 +11,7 @@ const isAuthenticated = (req, res, next) =>  {
 	}
 }
 
-router.get('/new', (req, res) => {
+router.get('/new', isAuthenticated, (req, res) => {
 	res.render('cryptids/new.ejs', { currentUser: req.session.currentUser })
 })
 
@@ -26,7 +26,7 @@ router.post('/', (req, res) => {
 	})
 })
 
-router.get('/', (req, res)=>{
+router.get('/', isAuthenticated, (req, res)=>{
     Cryptid.find({}, (error, allCryptids)=>{
         res.render('cryptids/index.ejs', {
             cryptids: allCryptids,
@@ -69,7 +69,7 @@ Cryptid.findById(req.params.id, (err, foundCryptid) => {
 	})
 })
 
-router.get('/:id/edit', (req, res) => {
+router.get('/:id/edit',isAuthenticated, (req, res) => {
 Cryptid.findById(req.params.id, (err, foundCryptid) => {
     res.render('cryptids/edit.ejs', {
       cryptid: foundCryptid,

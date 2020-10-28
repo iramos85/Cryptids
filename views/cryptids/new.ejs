@@ -1,15 +1,17 @@
 <%- include('../partials/header.ejs') %> 
 <%- include('../partials/nav.ejs') %>
 
-<h1>New Cryptid</h1>
+<h1 id='cryptid-new-headline'>New Cryptid</h1>
 <div id='new-image'>
-<form action="/cryptids" method="POST">
+    <div id='new-mask'>
+<form id='new-cryptid-text' action="/cryptids" method="POST">
     Name: <input type="text" name="name" /><br/>
     Image: <input type="text" place="Enter hosted image URL here" name="img" />
     Description: <textarea placeholder="Height/Shape/Characteristics" name="description"></textarea><br/>
     Aggressive: <input type="checkbox" name="temperament" /><br/>
-    <input type="submit" name="" value="Log Cryptid"/>
+    <input style = 'width: fit-content' id='create-user' type="submit" name="" value="Log Cryptid"/>
 </form>
+</div>
 </div>
 
 <%- include('../partials/footer.ejs') %>
