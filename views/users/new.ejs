@@ -1,11 +1,16 @@
 <%- include('../partials/header.ejs') %> 
 <%- include('../partials/nav.ejs') %>
 
-<h1>Create an Account</h1>
-<form action="/users" method="POST">
-    Username: <input type="text" name="username" /><br/>
-    Password: <input type="password" name="password" /><br/>
-    <input type="submit" name="" value="Create User"/>
-</form>
+<h1 id='session-title-text'>Create an Account</h1>
+
+<img id='new-profile-image' src="https://i.pinimg.com/originals/31/cd/9f/31cd9ff32930e3dc4f9a5b5627d6de31.jpg">
+    <div class='profile-fields'>
+    <form id='account-text' action="/users" method="POST">
+        Username: <input class='username' type="text" name="username" /><br/>
+        Password: <input class= 'password' type="password" name="password" /><br/>
+        <input id='create-user' type="submit" name="" value="Create User"/>
+    </form>
+    </div>
+
 
 <%- include('../partials/footer.ejs') %>

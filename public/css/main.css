@@ -74,6 +74,8 @@ height: auto;
 
 
 /*/////////////////////////////////////////////////////// header ///////////////////////////////////////////////*/
+
+
 #opaque {
     background: rgba(60, 60, 60, 0.75);
     z-index: 2;
@@ -116,7 +118,6 @@ header {
 
 /*/////////////////////////////////////////////////////// nav-bar ///////////////////////////////////////////////*/
 
-
 .nav-links{
     font-family: 'Special Elite',cursive;
     width: 100%;
@@ -155,8 +156,6 @@ text-decoration: none;
 color: whitesmoke;
 }
 
-
-
 #welcome{
     position: relative;
     margin-top: 15px;
@@ -166,15 +165,57 @@ color: whitesmoke;
     display: inline-block;
 }
 
+#profile-log {
+    display: inline-flex;
+    flex-direction: row-reverse;
+}
+
 .links{
     font-family: 'Special Elite', cursive;
     text-decoration: none;
 }
 
-/* //////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////Sign-In Session//////////////////////////////////////////// */
 
+#session-title-text {
+    font-family: 'Special Elite',cursive;
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
 
+#account-text {
+    font-family: 'Special Elite',cursive;
+}
 
+#create-user {
+    margin-top: 10px;
+    font-family: 'Special Elite',cursive;
+    font-size: 15px;
+    background-color: whitesmoke;
+    color:black;
+}
+
+#new-profile-image{
+ width: 50%;
+ margin-left: 25%;
+ margin-top: 0%;
+ height: 700px;
+ z-index: -2;
+ border: solid 6px;
+}
+
+.profile-fields {
+    font-family: 'Special Elite',cursive;
+    color: whitesmoke;
+    max-width: 100%;
+    margin-left: 40%;
+    margin-right: auto;
+    margin-top: -30%;
+}
+
+.username{
+    margin-bottom: 10px;
+}
 
 .description {
    position: absolute;

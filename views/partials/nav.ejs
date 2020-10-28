@@ -1,10 +1,10 @@
 
 <nav>
-    <div class='nav-links'>
+  <div class='nav-links'>
       <button class='nav-button'><a  id='nav-anchor' href="/cryptids">Cryptid Search</a></button>
       <button class='nav-button' onclick="playAudio('../audio/scream.wav')"><a id='nav-anchor' href="/cryptids/new">Log A Sighting</a></button>
       <button class='nav-button'><a  id='nav-anchor' href="/forums">Forum</a> </button>
-    </div>
+    
 
     <% if (currentUser) { %>
     <p style="font-family: 'Special Elite', cursive;"> Welcome <a style="text-decoration: none;" href="users/<%= currentUser.username %>"><%= currentUser.username %></a></p>
@@ -14,10 +14,11 @@
             <input type="submit" value="Log Out" style="font-family: 'Special Elite', cursive;"/>
           </form>
           <% } else { %>
-          <button type="button" name="button"><a class='links' href="/users/new">Sign Up</a></button>
-          <button type="button" name="button"><a class='links' href="/sessions/new">Log In</a></button>
+          <button id = 'profile-log' type="button" name="button"><a class='links' href="/users/new">Sign Up</a></button>
+          <button id = 'profile-log' type="button" name="button"><a class='links' href="/sessions/new">Log In</a></button>
           <% } %>
     </div>
+  </div>
 </nav>
 
 <script>
